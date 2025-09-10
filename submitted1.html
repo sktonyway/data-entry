@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employees Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Employees List</h1>
+  <table id="employeesTable">
+    <thead>
+      <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Gender</th>
+        <th>District</th>
+        <th>Designation</th>
+        <th>DOB</th>
+        <th>Age</th>
+        <th>PAN</th>
+        <th>Mobile 1</th>
+        <th>Mobile 2</th>
+        <th>Qualification</th>
+        <th>Experience</th>
+        <th>Aadhar</th>
+        <th>Pan</th>
+        <!-- Add more headers if needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be added dynamically -->
+    </tbody>
+  </table>
+
+  <script>
+    async function fetchEmployees() {
+      try {
+        const res = await fetch("http://localhost:5000/api/employees");
+        const employees = await res.json();
+
+        const tbody = document.querySelector("#employeesTable tbody");
+        tbody.innerHTML = ""; // clear existing rows
+
+        employees.forEach((emp, index) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${emp.name || ""}</td>
+            <td>${emp.fatherName || ""}</td>
+            <td>${emp.gender || ""}</td>
+            <td>${emp.district || ""}</td>
+            <td>${emp.designation || ""}</td>
+            <td>${emp.dob || ""}</td>
+            <td>${emp.age || ""}</td>
+            <td>${emp.pan || ""}</td>
+            <td>${emp.mob1 || ""}</td>
+            <td>${emp.mob2 || ""}</td>
+            <td>${emp.qualification || ""}</td>
+            <td>${emp.experience || ""}</td>
+            <td>${emp.aadhar || ""}</td>
+            <td>${emp.pan || ""}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        console.error("Error fetching employees:", err);
+        alert("Failed to load employees data");
+      }
+    }
+
+    // Fetch data on page load
+    fetchEmployees();
+  </script>
+
+</body>
+</html>

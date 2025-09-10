@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Information Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Employee Information Form</h2>
+    <form id="employeeForm">
+        <div class="form-grid">
+            <div>
+                <label>Temporary Code</label>
+                <input type="text" name="tempCode">
+            </div>
+            <div class="full-width">
+                <label>Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div>
+                <label>Father Name</label>
+                <input type="text" name="fatherName">
+            </div>
+            <div>
+                <label>Gender</label>
+                <select name="gender" required>
+                    <option value="">--Select--</option>
+                    <option selected value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label>District</label>
+                <select name="district" required>
+                    <option value="">--Select District--</option>
+                    <option value="Araria">Araria</option>
+                    <option value="Arwal">Arwal</option>
+                    <option value="Aurangabad">Aurangabad</option>
+                    <option value="Banka">Banka</option>
+                    <option value="Begusarai">Begusarai</option>
+                    <option value="Bhagalpur">Bhagalpur</option>
+                    <option value="Bhojpur">Bhojpur</option>
+                    <option value="Buxar">Buxar</option>
+                    <option value="Darbhanga">Darbhanga</option>
+                    <option value="East Champaran">East Champaran</option>
+                    <option value="Gaya">Gaya</option>
+                    <option value="Gopalganj">Gopalganj</option>
+                    <option value="Jamui">Jamui</option>
+                    <option value="Jehanabad">Jehanabad</option>
+                    <option value="Kaimur">Kaimur</option>
+                    <option value="Katihar">Katihar</option>
+                    <option value="Khagaria">Khagaria</option>
+                    <option value="Kishanganj">Kishanganj</option>
+                    <option value="Lakhisarai">Lakhisarai</option>
+                    <option value="Madhepura">Madhepura</option>
+                    <option value="Madhubani">Madhubani</option>
+                    <option value="Munger">Munger</option>
+                    <option value="Muzaffarpur">Muzaffarpur</option>
+                    <option value="Nalanda">Nalanda</option>
+                    <option value="Nawada">Nawada</option>
+                    <option value="Patna">Patna</option>
+                    <option value="Purnia">Purnia</option>
+                    <option value="Rohtas">Rohtas</option>
+                    <option value="Saharsa">Saharsa</option>
+                    <option value="Samastipur">Samastipur</option>
+                    <option value="Saran">Saran</option>
+                    <option value="Sheikhpura">Sheikhpura</option>
+                    <option value="Sheohar">Sheohar</option>
+                    <option value="Sitamarhi">Sitamarhi</option>
+                    <option value="Siwan">Siwan</option>
+                    <option value="Supaul">Supaul</option>
+                    <option value="Vaishali">Vaishali</option>
+                    <option value="West Champaran">West Champaran</option>
+                </select>
+
+            </div>
+            <div>
+                <label>Designation</label>
+                <select name="designation" required>
+                    <option value="">--Select Designation--</option>
+                    <option selected value="driver">Driver</option>
+                    <option value="emt">EMT</option>
+                    <option value="helper">Helper</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label>Mob. No. 1</label>
+                <input type="tel" name="mob1" pattern="[0-9]{10}" required>
+            </div>
+            <div>
+                <label>Mob. No. 2</label>
+                <input type="tel" name="mob2" pattern="[0-9]{10}">
+            </div>
+            <div>
+                <label>DOB</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" name="age" min="18" id="age" readonly>
+            </div>
+            <div>
+                <label>Educational Qualification</label>
+                <select name="qualification" required>
+                    <option value="">--Select Designation--</option>
+                    <option selected value="8th">8th Pass</option>
+                    <option value="10th">10th Pass</option>
+                    <option value="12th">12th Pass</option>
+                    <option>Others</option>
+                </select>
+            </div>
+            <div>
+                <label>Paramedic Course</label>
+                <input type="text" name="paramedic">
+            </div>
+            <div>
+                <label>Experience Years</label>
+                <input type="number" name="experience">
+            </div>
+            <div>
+                <label>ALS/BLS Certificate</label>
+                <select name="alsbls" required>
+                    <option value="">--Select--</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div>
+                <label>Aadhar Number</label>
+                <input type="text" name="aadhar" pattern="[0-9]{12}">
+            </div>
+            <div>
+                <label>PAN Number</label>
+                <input type="text" name="pan" id="pan" maxlength="10" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required>
+            </div>
+
+            <div>
+                <label>Interview Date</label>
+                <input type="date" name="interviewDate">
+            </div>
+            <div>
+                <label>Document As Per RFP</label>
+                <input type="text" name="docRFP">
+            </div>
+            <div>
+                <label>Pending Documents</label>
+                <input type="text" name="pendingDocs">
+            </div>
+            <div>
+                <label>Document Status</label>
+                <select name="docStatus">
+                    <option value="">--Select--</option>
+                    <option value="y">Completed</option>
+                    <option value="n">Not Completed</option>
+                </select>
+            </div>
+            <div>
+                <label>Driving Test</label>
+                <select name="drivingTest">
+                    <option value="">--Select--</option>
+                    <option value="pass">Passed</option>
+                    <option value="fail">Failed</option>
+                </select>
+            </div>
+            <div>
+                <label>HR Remarks</label>
+                <textarea name="hrRemarks"></textarea>
+            </div>
+            <div>
+                <label>Medical Test Status</label>
+                <input type="text" name="medicalStatus">
+            </div>
+            <div>
+                <label>MOU Release</label>
+                <select name="mouRelease">
+                    <option value="">--Select--</option>
+                    <option selected>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div>
+                <label>MOU Release Date</label>
+                <input type="date" name="mouDate">
+            </div>
+            <div>
+                <label>Onboard Location</label>
+                <input type="text" name="onboardLocation">
+            </div>
+            <div>
+                <label>Batch</label>
+                <input type="text" name="batch">
+            </div>
+            <div class="full-width">
+                <div><label>Remarks</label>
+                    <textarea name="remarks"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+            <p>To view all submitted docs, <a href="submitted1.html">Click Here</a>. </p>
+
+        </div>
+    </form>
+</body>
+<script src="index.js"></script>
+
+</html>
