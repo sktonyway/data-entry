@@ -21,14 +21,13 @@ form.addEventListener("submit", async function (e) {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch("http://localhost:5000/api/employees", {
+    const res = await fetch("/api/employees", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-
     if (res.ok) {
-      alert("Form submitted & saved in MongoDB!");
+      alert("Form submitted successfully!");
       form.reset();
     } else {
       alert("Error saving data!");

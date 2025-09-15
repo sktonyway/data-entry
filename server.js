@@ -8,8 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-console.log(process.env.MONGODB_URI);
-
 const client = new MongoClient(process.env.MONGODB_URI);
 
 async function run() {
