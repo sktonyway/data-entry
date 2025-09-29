@@ -21,7 +21,7 @@ form.addEventListener("submit", async function (e) {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch("/api/employees", {
+    const res = await fetch("https://data-entry-production-c20b.up.railway.app/api/employees", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
