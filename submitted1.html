@@ -61,7 +61,7 @@
   <script>
     async function fetchEmployees() {
       try {
-        const res = await fetch("http://localhost:5000/api/employees");
+        const res = await fetch("https://data-entry-production-c20b.up.railway.app/api/employees");
         const employees = await res.json();
 
         const tbody = document.querySelector("#employeesTable tbody");
